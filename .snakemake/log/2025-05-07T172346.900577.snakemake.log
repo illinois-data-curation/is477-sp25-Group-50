@@ -1,0 +1,8 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: Zainas-MacBook-Pro.local
+Building DAG of jobs...
+MissingInputException in rule all in file "/Users/zainakagzi/Desktop/is477-sp25-Group-50/Snakefile", line 1:
+Missing input files for rule all:
+    affected files:
+        data/mental_health.json

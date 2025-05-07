@@ -1,0 +1,43 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: Zainas-MacBook-Pro.local
+Building DAG of jobs...
+CyclicGraphException in rule clean_mental_health in file "/Users/zainakagzi/Desktop/is477-sp25-Group-50/Snakefile", line 15:
+Cyclic dependency on rule clean_mental_health.
+
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count
+------------------  -------
+all                       1
+plot_mental_health        1
+total                     2
+
+Select jobs to execute...
+Execute 1 jobs...
+[Wed May  7 17:31:10 2025]
+localrule plot_mental_health:
+    input: data/mental_health.json
+    output: figures/mental_health_plot.png
+    jobid: 3
+    reason: Missing output files: figures/mental_health_plot.png
+    resources: tmpdir=/var/folders/43/q479n7kx3gl4t9tmvb_qktwc0000gn/T
+
+[Wed May  7 17:31:11 2025]
+Finished jobid: 3 (Rule: plot_mental_health)
+1 of 2 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Wed May  7 17:31:11 2025]
+localrule all:
+    input: data/air_quality_clean.csv, data/mental_health.json, figures/air_quality_trends.png, figures/mental_health_plot.png
+    jobid: 0
+    reason: Input files updated by another job: figures/mental_health_plot.png
+    resources: tmpdir=/var/folders/43/q479n7kx3gl4t9tmvb_qktwc0000gn/T
+
+[Wed May  7 17:31:11 2025]
+Finished jobid: 0 (Rule: all)
+2 of 2 steps (100%) done
+Complete log(s): /Users/zainakagzi/Desktop/is477-sp25-Group-50/.snakemake/log/2025-05-07T173110.849782.snakemake.log

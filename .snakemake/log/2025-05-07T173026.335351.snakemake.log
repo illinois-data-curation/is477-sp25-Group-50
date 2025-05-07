@@ -1,0 +1,43 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: Zainas-MacBook-Pro.local
+Building DAG of jobs...
+CyclicGraphException in rule clean_mental_health in file "/Users/zainakagzi/Desktop/is477-sp25-Group-50/Snakefile", line 15:
+Cyclic dependency on rule clean_mental_health.
+
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count
+------------------  -------
+all                       1
+plot_mental_health        1
+total                     2
+
+Select jobs to execute...
+Execute 1 jobs...
+[Wed May  7 17:30:26 2025]
+localrule plot_mental_health:
+    input: data/mental_health.json
+    output: figures/mental_health_plot.png
+    jobid: 3
+    reason: Missing output files: figures/mental_health_plot.png
+    resources: tmpdir=/var/folders/43/q479n7kx3gl4t9tmvb_qktwc0000gn/T
+
+Waiting at most 5 seconds for missing files:
+figures/mental_health_plot.png (missing locally)
+MissingOutputException in rule plot_mental_health in file "/Users/zainakagzi/Desktop/is477-sp25-Group-50/Snakefile", line 25:
+Job 3  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+figures/mental_health_plot.png (missing locally, parent dir contents: air_quality_trends.png)
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Wed May  7 17:30:32 2025]
+Error in rule plot_mental_health:
+    message: None
+    jobid: 3
+    input: data/mental_health.json
+    output: figures/mental_health_plot.png
+Complete log(s): /Users/zainakagzi/Desktop/is477-sp25-Group-50/.snakemake/log/2025-05-07T173026.335351.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.
