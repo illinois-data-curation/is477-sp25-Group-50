@@ -1,6 +1,7 @@
 rule all:
     input:
         [
+<<<<<<< HEAD
             "data/air_quality_clean.csv",
             "data/mental_health.json",
             "figures/air_quality_trends.png",
@@ -26,3 +27,8 @@ rule plot_mental_health:
     input: "data/mental_health.json"
     output: "figures/mental_health_plot.png"
     script: "scripts/plot_mental_health.py"
+=======
+            "data/air_quality.csv",
+            "data/mental_health.json"
+        ]
+>>>>>>> 1aabb85ded670e9e4414539e7772aec17a257f69

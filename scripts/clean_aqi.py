@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # scripts/clean_aqi.py
 
 import pandas as pd
@@ -20,3 +21,14 @@ def clean_air_quality(input_path, output_path):
 if __name__ == "__main__":
     print("This script will clean the air quality data.")
     clean_air_quality("data/pollution_us_2000_2016.csv", "data/air_quality_clean.csv")
+=======
+import pandas as pd
+
+def clean_air_quality(file_path):
+    """Loads air quality CSV and performs basic cleaning."""
+    df = pd.read_csv(file_path)
+    return df
+
+if __name__ == "__main__":
+    print("This script will clean the air quality data.")
+>>>>>>> 1aabb85ded670e9e4414539e7772aec17a257f69
